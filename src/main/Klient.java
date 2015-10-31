@@ -22,7 +22,7 @@ public class Klient {
 	 }
 	 
 	 public void setImie(String imie) {
-		 this.imie =imie;
+		 this.imie = imie;
 	
 	}
 	 public String getNazwisko() {

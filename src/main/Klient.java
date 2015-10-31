@@ -4,13 +4,13 @@ public class Klient {
 	private long id_klient;
 	private String imie = "brak";
 	private String nazwisko = "brak";
-	private String telefon = "brak";
+	private long telefon;
 	
 	public Klient() {
 		super();
 		
 	}
-	 public Klient(String imie, String nazwisko, String telefon, long id_klient) {
+	 public Klient(String imie, String nazwisko, long telefon, long id_klient) {
 		 super();
 		 this.id_klient = id_klient;
 		 this.imie = imie;
@@ -45,11 +45,11 @@ public class Klient {
 	 this.nazwisko = nazwisko;	 
 	 }
 	 
-	 public String getTelefon() {
+	 public long getTelefon() {
 		 return telefon;
 	 
 	 }
-	 public void setTelefon(String telefon){
+	 public void setTelefon(long telefon){
 	 this.telefon = telefon;
 	 }
 	 

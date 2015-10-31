@@ -1,7 +1,7 @@
 package main;
 
 public class Klient {
-
+	private long id_klient;
 	private String imie = "brak";
 	private String nazwisko = "brak";
 	private String telefon = "brak";
@@ -10,11 +10,23 @@ public class Klient {
 		super();
 		
 	}
-	 public Klient(String imie, String nazwisko, String telefon) {
+	 public Klient(String imie, String nazwisko, String telefon, long id_klient) {
 		 super();
+		 this.id_klient = id_klient;
 		 this.imie = imie;
 		 this.nazwisko = nazwisko;
 		 this.telefon = telefon;
+	 }
+	 
+	 public long getId_klient(){
+		 
+		 return id_klient;
+		
+	 }
+	 
+	 
+	 public void setId_klient(long id_klient){
+		 this.id_klient = id_klient;
 	 }
 	 
 	 public String getImie() {

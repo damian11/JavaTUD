@@ -23,5 +23,25 @@ public class KlientManager {
 	
 	private Statement statement;
 	
-	
+	public KlientManager(){
+		try(
+			connection = DriverManager.getConnection(url);
+			statement = connection.createStatement();
+			
+			ResultSet rs =	connection.getMetaData().getTables(null, null, null, null);
+			boolean tableExists = false;
+			while(rs.next()){
+				if("Klient".equalsIgnoreCase(rs.getString("TABLE_NAME"))){
+					tableExists = true;
+					break;
+				}
+			}
+			
+			if(!tableExists)
+				statement.executeUpdate(createTableKlient);
+			
+			DodajKlient = connection.prepareStatement("INSERT INTO Klient(imie, nazwisko)")
+				
+			)
+	}
 }

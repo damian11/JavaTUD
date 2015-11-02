@@ -1,4 +1,4 @@
-package service;
+package service;g
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -40,8 +40,63 @@ public class KlientManager {
 			if(!tableExists)
 				statement.executeUpdate(createTableKlient);
 			
-			DodajKlient = connection.prepareStatement("INSERT INTO Klient(imie, nazwisko)")
+			DodajKlient = connection.prepareStatement("INSERT INTO Klient(imie, nazwisko, telefon) VALUES (?, ?, ?)");
+			UsunKlient = connection.prepareStatement("DELETE FROM Klient WHERE id_klient = ?");
+			UsunKlientow = connection.prepareStatement("DELETE FROM Klient");
+			PobierzKlientow = connection.prepareStatement("SELECT id_klient, imie, nazwisko, telefon FROM Klient");
+			EdytujKlienta = connection.prepareStatement("UPDATE Klient SET imie = ?, nazwisko = ?, telefon = ? WHERE id_klient = ?");
+			
 				
-			)
+			
+	}catch(SQLException e){
+		e.printStackTrace();
 	}
 }
+
+Connection getConnection(){
+	return connection;
+}
+	void wyczyscKlientow(){
+	try{
+		UsunKlientow.executeUpdate();
+		}catch (SQLException e){ 
+			e.printStackTrace();
+		}
+}
+
+	public int DodajKlienta(Klient klient){
+		int count = 0;
+		try{
+			DodajKlienta.setString(1, klient.getImie());
+			DodajKlienta.setString(2, klient.getNazwisko());
+			DodajKlienta.setLong(3, klient.getTelefon());
+			
+			
+			
+			count = DodajKlienta.executeUpdate();
+			
+			
+		}catch (SQLException e){
+			e.printStackTrace();
+		}
+		return count;
+	}
+	public List<Klient> PobierzKlientow(){
+		List<Klient> klienci = new ArrayList<Klient>();
+		
+		try{
+			ResultSet re = PobierzKlientow.executeQuery();
+			
+			while (rs.next()){
+				Klient k = new Klient();
+				k.setId_klient(rs.getLong("id_klient"));
+				k.setImie(rs.getImie("imie"));
+				k.setNazwisko(rs.getNazwisko("nazwisko"));
+				k.setTelefon(rs.getTelefon("telefon"));
+				klient.add(k);
+			}catch(SQLException e) {
+				e.printStackTrace();
+			}
+			return klient;
+		}
+	}

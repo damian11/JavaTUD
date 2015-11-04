@@ -87,10 +87,11 @@ public Connection getConnection(){
 	public int edytujKlienta(Klient klient){
 		int count = 0;
 		try{
+		
 			EdytujKlienta.setString(1, klient.getImie());
 			EdytujKlienta.setString(2, klient.getNazwisko());
 			EdytujKlienta.setLong(3, klient.getTelefon());
-			
+			EdytujKlienta.setLong(4, klient.getId_klient());
 			
 			
 			count = EdytujKlienta.executeUpdate();
@@ -104,9 +105,8 @@ public Connection getConnection(){
 	public int usunKlienta(Klient klient){
 		int count = 0;
 		try{
-			UsunKlienta.setString(1, klient.getImie());
-			UsunKlienta.setString(2, klient.getNazwisko());
-			UsunKlienta.setLong(3, klient.getTelefon());
+			UsunKlienta.setLong(1, klient.getId_klient());
+
 			
 			
 			
@@ -118,6 +118,8 @@ public Connection getConnection(){
 		}
 		return count;
 	}
+	
+	
 	public List<Klient> PobierzKlientow(){
 		List<Klient> klienci = new ArrayList<Klient>();
 		

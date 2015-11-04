@@ -37,5 +37,21 @@ service.KlientManager klientManager = new KlientManager();
 	assertEquals(TELEFON_1, wyszukajKlient.getTelefon());
 	}
 
+@Test
+	public void sprawdzUsunKlienta() {
+	
+	Klient klient = new Klient (ID_KLIENT_1, IMIE_1, NAZWISKO_1, TELEFON_1);
+	
+	klientManager.wyczyscKlientow();
+	assertEquals(1,klientManager.dodajKlienta(klient));
+	
+	List<Klient> k = klientManager.PobierzKlientow();
+	Klient wyszukajKlient = k.get(0);
+	
+	
+	assertEquals(IMIE_1, klientManager.usunKlienta(wyszukajKlient));
+
+}
+
 }
 

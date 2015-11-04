@@ -6,11 +6,10 @@ public class Klient {
 	private String nazwisko = "brak";
 	private long telefon;
 	
-	public Klient() {
-		super();
+
 		
-	}
-	 public Klient(String imie, String nazwisko, long telefon, long id_klient) {
+	
+	 public Klient(long id_klient, String imie, String nazwisko, long telefon) {
 		 super();
 		 this.id_klient = id_klient;
 		 this.imie = imie;
@@ -18,7 +17,11 @@ public class Klient {
 		 this.telefon = telefon;
 	 }
 	 
-	 public long getId_klient(){
+	 public Klient() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public long getId_klient(){
 		 
 		 return id_klient;
 		
@@ -52,6 +55,6 @@ public class Klient {
 	 public void setTelefon(long telefon){
 	 this.telefon = telefon;
 	 }
-	 
+
 	 }
 

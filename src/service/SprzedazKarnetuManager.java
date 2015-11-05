@@ -12,6 +12,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import main.SprzedazKarnetu;
 
 public class SprzedazKarnetuManager {
@@ -91,10 +92,10 @@ public Connection getConnection(){
 		int count = 0;
 		try{
 		
-			EdytujSprzedazKarnetu.setLong(1, sprzedazKarnetu.getId_klient());
-			EdytujSprzedazKarnetu.setLong(2, sprzedazKarnetu.getId_karnet());
-			EdytujSprzedazKarnetu.setString(3, sprzedazKarnetu.getNotatka());
-			EdytujSprzedazKarnetu.setLong(4, sprzedazKarnetu.getId_karnet());
+			EdytujSprzedazKarnetu.setLong(1, main.SprzedazKarnetu.getId_klient());
+			EdytujSprzedazKarnetu.setLong(2, main.SprzedazKarnetu.getId_karnet());
+			EdytujSprzedazKarnetu.setString(3, main.SprzedazKarnetu.getNotatka());
+			EdytujSprzedazKarnetu.setLong(4, main.SprzedazKarnetu.getId_karnet());
 			
 			
 			count = EdytujSprzedazKarnetu.executeUpdate();

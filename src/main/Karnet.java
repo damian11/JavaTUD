@@ -12,9 +12,9 @@ public class Karnet {
 		}
 	
 	
-	public Karnet(String rodzaj, String opis, int cena, long id_karnet) {
+	public Karnet(String rodzaj, String opis, double cena) {
 		super();
-		this.id_karnet = id_karnet;
+		
 		this.rodzaj = rodzaj;
 		this.opis = opis;
 		this.cena = cena;

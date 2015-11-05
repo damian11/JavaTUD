@@ -19,7 +19,7 @@ public class SprzedazKarnetu {
 		this.id_klient = id_klient;
 		this.notatka = notatka;
 	}
-	public long getId_klient(){
+	public static long getId_klient(){
 		return id_klient;
 	}
 	
@@ -28,7 +28,7 @@ public class SprzedazKarnetu {
 		
 	}
 	
-	public long getId_karnet(){
+	public static long getId_karnet(){
 		return id_karnet;
 	}
 	
@@ -36,7 +36,7 @@ public class SprzedazKarnetu {
 		this.id_karnet = id_karnet;
 	}
 	
-	public String getNotatka(){
+	public static String getNotatka(){
 		return notatka;
 	}
 	

@@ -2,7 +2,7 @@ package main;
 
 public class SprzedazKarnetu {
 
-	
+	private long id_sprzedazKarnetu;
 	private long id_klient;
 	private long id_karnet;
 	private String notatka = "brak";
@@ -43,6 +43,16 @@ public class SprzedazKarnetu {
 	public void setNotatka(String notatka){
 		this.notatka = notatka;
 	}
+
+	public long getId_sprzedazKarnetu() {
+		return id_sprzedazKarnetu;
+	}
+	
+	public void setId_sprzedazKarnetu(Long id_sprzedazKarnetu) {
+		this.id_sprzedazKarnetu = id_sprzedazKarnetu;
+	}
+	
+	
 }
 
 

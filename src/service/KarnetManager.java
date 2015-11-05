@@ -71,7 +71,7 @@ public Connection getConnection(){
 		try{
 			DodajKarnet.setString(1, karnet.getRodzaj());
 			DodajKarnet.setString(2, karnet.getOpis());
-			DodajKarnet.setDouble(3, karnet.getTelefon());
+			DodajKarnet.setDouble(3, karnet.getCena());
 			
 			
 			

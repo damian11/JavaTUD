@@ -4,7 +4,7 @@ public class Karnet {
 	private long id_karnet;
 	private String rodzaj = "brak";
 	private String opis = "brak";
-	private int cena;
+	private double cena;
 	
 	
 	public Karnet() {
@@ -45,13 +45,12 @@ public class Karnet {
 		this.opis = opis;
 	}
 	
-	public int getCena(){
+	public double getCena(){
 		return cena;
 	}
 	
-	public void setCena(int cena){
+	public void setCena(double cena){
 		this.cena = cena;
 	
 	}
-	
 }

@@ -80,36 +80,7 @@ import service.SprzedazKarnetuManager;
 	
 	
 	
-	
-	@Test
-		public void sprawdzDodajSprzedazKarnetu() {
-		
-		Klient klient = new Klient (IMIE_1, NAZWISKO_1, TELEFON_1);
-		
-		KlientManager.wyczyscKlientow();
-		assertEquals(1,KlientManager.dodajKlienta(klient));
-		
-		List<Klient> klienci = KlientManager.PobierzKlientow();
-		Klient pobieranieKlienta = klienci.get(0);
-		
-		
-		Karnet karnet = new Karnet (RODZAJ_1, OPIS_1, CENA_1);
-		
-		KarnetManager.wyczyscKarnety();
-		assertEquals(1, KarnetManager.dodajKarnet(karnet));
-		
-		List<Karnet> karnety = KarnetManager.PobierzKarnety();
-		Karnet pobieranieKarnetu = karnety.get(0);
-		
-		SprzedazKarnetu sprzedazKarnetu  = new SprzedazKarnetu ();
-		
-		
-		
 
-
-		assertEquals(1, SprzedazKarnetuManager.dodajSprzedazKarnetu(pobieranieKlienta, pobieranieKarnetu));
-
-	
 	}
-	}
+	
 

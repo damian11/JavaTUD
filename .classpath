@@ -7,5 +7,6 @@
 	<classpathentry kind="lib" path="C:/Users/user1.user/Desktop/hsqldb-2.3.3/hsqldb/build/gradle-javaPropFile-plugin-0.6.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/user1.user/Desktop/hsqldb-2.3.3/hsqldb/lib/hsqldb.jar"/>
 	<classpathentry kind="lib" path="C:/Users/user1.user/Desktop/hsqldb-2.3.3/hsqldb/lib/sqltool.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user1.user/Desktop/hsqldb/lib/hsqldb.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

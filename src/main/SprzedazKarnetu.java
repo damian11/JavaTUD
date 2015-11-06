@@ -5,21 +5,16 @@ public class SprzedazKarnetu {
 	private long id_sprzedazKarnetu;
 	private long id_klient;
 	private long id_karnet;
-	private String notatka = "brak";
+	
 	
 	
 	
 	public SprzedazKarnetu(){
-		super();
+	
 	}
 
-	public SprzedazKarnetu(long id_klient, long id_karnet, String notatka){
-		super();
-		this.id_karnet = id_karnet;
-		this.id_klient = id_klient;
-		this.notatka = notatka;
-	}
-	public static long getId_klient(){
+
+	public  long getId_klient(){
 		return id_klient;
 	}
 	
@@ -28,7 +23,7 @@ public class SprzedazKarnetu {
 		
 	}
 	
-	public static long getId_karnet(){
+	public  long getId_karnet(){
 		return id_karnet;
 	}
 	
@@ -36,13 +31,8 @@ public class SprzedazKarnetu {
 		this.id_karnet = id_karnet;
 	}
 	
-	public static String getNotatka(){
-		return notatka;
-	}
+
 	
-	public void setNotatka(String notatka){
-		this.notatka = notatka;
-	}
 
 	public long getId_sprzedazKarnetu() {
 		return id_sprzedazKarnetu;

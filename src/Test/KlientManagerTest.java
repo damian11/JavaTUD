@@ -17,12 +17,12 @@ service.KlientManager klientManager = new KlientManager();
 
      private final static String IMIE_1 = "Jurand";
      private final static String NAZWISKO_1 = "Spychowski";
-     private final static long TELEFON_1 = 600100100;
+     private final static int TELEFON_1 = 600100100;
      
 
      private final static String IMIE_2 = "Ja";
      private final static String NAZWISKO_2 = "Nusz";
-     private final static long TELEFON_2 = 555222111;
+     private final static int TELEFON_2 = 555222111;
      
 @Test
 	public void sprawdzPolaczenie() {

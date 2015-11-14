@@ -1,7 +1,7 @@
 package main;
 
 public class Karnet {
-	private long id_karnet;
+	private int id_karnet;
 	private String rodzaj = "brak";
 	private String opis = "brak";
 	private double cena;
@@ -21,11 +21,11 @@ public class Karnet {
 		
 	}
 	
-	public long getId_karnet(){
+	public int getId_karnet(){
 		return id_karnet;
 	}
 	
-	public void setId_karnet(long id_karnet){
+	public void setId_karnet(int id_karnet){
 		this.id_karnet = id_karnet;
 	}
 	

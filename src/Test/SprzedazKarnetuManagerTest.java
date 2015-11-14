@@ -1,21 +1,21 @@
 package Test;
 
 
-	import static org.junit.Assert.*;
+import static org.junit.Assert.*;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-	import main.Karnet;
+import main.Karnet;
 import main.Klient;
 import main.SprzedazKarnetu;
+import service.SprzedazKarnetuManager;
+import service.KarnetManager;
 
-	import org.junit.Test;
 
-	import service.KarnetManager;
+import org.junit.Test;
 import service.KlientManager;
-	
 import service.SprzedazKarnetuManager;
 
 	public class SprzedazKarnetuManagerTest {
@@ -25,11 +25,12 @@ import service.SprzedazKarnetuManager;
 	
 	
 		
-
+	private final static int ID_KLIENT_1 = 1;
     private final static String IMIE_1 = "Jurand";
     private final static String NAZWISKO_1 = "Spychowski";
-    private final static long TELEFON_1 = 600100100;
+    private final static int TELEFON_1 = 600100100;
     
+    private final static int ID_KARNET_1 = 1;
     private final static String RODZAJ_1 = "OPEN";
     private final static String OPIS_1 = "Karnet pozwala na: korzystanie z wszystkich stref fitnnes, uczestniczenie we wszystkich zajeciach, oraz gwarantuje 2 treningi personalne miesiêcznie";
     private final static double CENA_1 = 250;
@@ -77,9 +78,18 @@ import service.SprzedazKarnetuManager;
 	assertEquals(TELEFON_1, pobieranieKlienta.getTelefon());
 	}
 	
+	@Test
+	public void sprawdzDodajSprzedazKarnetu() {
+	
+	SprzedazKarnetu sprzedaz = new SprzedazKarnetu(ID_KLIENT_1, ID_KARNET_1);
+	SprzedazKarnetuManager.wyczyscSprzedazeKarnetu();
+	assertEquals(1, SprzedazKarnetuManager.dodajSprzedazKarnetu(sprzedaz));
+			
+	}
 	
 	
 	
+
 
 	}
 	

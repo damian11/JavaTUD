@@ -1,16 +1,16 @@
 package main;
 
 public class Klient {
-	private long id_klient;
+	private int id_klient;
 	private String imie = "brak";
 	private String nazwisko = "brak";
-	private long telefon;
+	private int telefon;
 	
 	public Klient() {
 		super();
 		
 	}
-	 public Klient(String imie, String nazwisko, long telefon) {
+	 public Klient(String imie, String nazwisko, int telefon) {
 		 super();
 		
 		 this.imie = imie;
@@ -18,14 +18,14 @@ public class Klient {
 		 this.telefon = telefon;
 	 }
 	 
-	 public long getId_klient(){
+	 public int getId_klient(){
 		 
 		 return id_klient;
 		
 	 }
 	 
 	 
-	 public void setId_klient(long id_klient){
+	 public void setId_klient(int id_klient){
 		 this.id_klient = id_klient;
 	 }
 	 
@@ -45,11 +45,11 @@ public class Klient {
 	 this.nazwisko = nazwisko;	 
 	 }
 	 
-	 public long getTelefon() {
+	 public int getTelefon() {
 		 return telefon;
 	 
 	 }
-	 public void setTelefon(long telefon){
+	 public void setTelefon(int telefon){
 	 this.telefon = telefon;
 	 }
 	 
